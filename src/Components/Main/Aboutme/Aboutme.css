@@ -1,0 +1,14 @@
+.blogs {
+    min-height: 100vh;
+    background-color: rgb(226, 226, 226);
+}
+
+.greetings {
+    color: rgb(0, 41, 130);
+
+}
+
+.aboutme-img {
+    border-radius: 50%;
+    margin: 20px;
+}
