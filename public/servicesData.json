@@ -9,8 +9,8 @@
     },
     {
         "name": "Unpredictable Safari",
-        "price": "$300",
-        "image": "https://images.unsplash.com/photo-1570786697378-ab648e3e6d6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "price": "$400",
+        "image": "https://images.unsplash.com/photo-1547970810-dc1eac37d174?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=636&q=80",
         "description": "Thousands of greatly captured copyright free photos for your personal blog,newspaper, reasearch paper & journal ",
         "id": 2,
         "button": "Buy Now"
@@ -18,7 +18,7 @@
     {
         "name": "Marine Eco",
         "price": "$320",
-        "image": "https://images.unsplash.com/photo-1595503240812-7286dafaddc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80",
+        "image": "https://images.unsplash.com/photo-1497671954146-59a89ff626ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
         "description": "Thousands of photos of marine ecology for your personal presentation,reasearch paper & journal ",
         "id": 3,
         "button": "Buy Now"

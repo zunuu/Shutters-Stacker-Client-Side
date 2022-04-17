@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='text-white'>
+        <div className='text-white ' >
             copyright &copy; Shutters Stacker
         </div>
     );

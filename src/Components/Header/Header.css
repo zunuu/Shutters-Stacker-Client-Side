@@ -1,3 +1,27 @@
 span {
     color: rgb(206, 55, 55) !important;
+    font-weight: 100;
+}
+
+a {
+    color: white;
+    font-weight: 100;
+    text-decoration: none;
+    font-family: monospace;
+}
+
+
+a :hover {
+    color: rgb(206, 55, 55);
+
+    text-decoration: none;
+}
+
+strong {
+    color: white;
+
+}
+
+strong:hover {
+    color: white
 }

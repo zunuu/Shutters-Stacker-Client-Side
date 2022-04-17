@@ -1,17 +1,32 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
-import Banner from './Components/Main/Banner/Banner';
-import Services from './Components/Main/Services/Services';
+import Banner from './Components/Main/Home/Banner/Banner';
 import Footer from './Components/Footer/Footer';
+import { Route, Routes } from 'react-router-dom';
+import Aboutme from './Components/Main/Aboutme/Aboutme';
+import Home from './Components/Main/Home/Home';
+import Blogs from './Components/Main/Blogs/Blogs';
+import Checkout from './Components/Main/Checkout/Checkout';
+import Login from './Components/Main/Login/Login';
+import Services from './Components/Main/Home/Services/Services';
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Banner></Banner>
-      <Services></Services>
+      <Routes>
+        <Route path="checkout" element={<Checkout></Checkout>} />
+        <Route path="home" element={<Home></Home>} />
+        <Route path="services" element={<Services></Services>} />
+        <Route path="blogs" element={<Blogs></Blogs>} />
+        <Route path="checkout" element={<Checkout></Checkout>} />
+        <Route path="aboutme" element={<Aboutme></Aboutme>} />
+        <Route path="login" element={<Login></Login>} />
+      </Routes>
+
       <Footer></Footer>
+
     </div>
   );
 }
