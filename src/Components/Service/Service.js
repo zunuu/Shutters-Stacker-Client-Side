@@ -10,15 +10,16 @@ const Service = (props) => {
         <div className='card mx-auto mb-4 bg-warning bg-opacity-25 text-white serviceCards' style={{ width: '18rem' }}>
             <img src={image} class="card-img-top m-0 mb-2 mt-0 mx-auto p-0" alt="..." />
             <div className="card-body">
-                <h5 className="card-title">{name}</h5>
+                <h5 className="card-title fs-4">{name}</h5>
+                <hr />
                 <p className="card-text">{
                     description
                 }</p>
-
+                <hr />
             </div>
 
             <div class="card-body">
-                <strong>Price{price}</strong>
+                <strong className=''>Price: {price}</strong>
             </div>
         </div>
 
