@@ -8,7 +8,18 @@
 
 }
 
+.name {
+    color: orange;
+    font-weight: 500;
+}
+
 .aboutme-img {
     border-radius: 50%;
     margin: 20px;
+    padding: 10px;
+    transition: .5s;
+}
+
+.aboutme-img:hover {
+    padding: 0px;
 }
