@@ -11,6 +11,7 @@ import Checkout from './Components/Main/Checkout/Checkout';
 import Login from './Components/Main/Login/Login';
 import Services from './Components/Main/Home/Services/Services';
 import NotFound from './Components/Main/NotFound404/NotFound';
+import Register from './Components/Main/Register/Register';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="checkout" element={<Checkout></Checkout>} />
         <Route path="aboutme" element={<Aboutme></Aboutme>} />
         <Route path="login" element={<Login></Login>} />
+        <Route path="register" element={<Register></Register>} />
         <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
 
