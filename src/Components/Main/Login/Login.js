@@ -1,3 +1,4 @@
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -29,7 +30,16 @@ const Login = () => {
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
     }
-
+    const provider = new GoogleAuthProvider();
+    const handleSignInGoogle = () => {
+        signInWithPopup(auth, provider)
+            .then(res => {
+                console.log(res.user);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
 
     return (
         <div className='bg-white login pt-5'>
@@ -53,6 +63,9 @@ const Login = () => {
                 }
                 <Button variant="primary" type="submit">
                     Login
+                </Button> { } &nbsp;
+                <Button variant="success" className='my-3' type="submit" onClick={handleSignInGoogle}>
+                    Sign In With Google
                 </Button>
                 <p className='fw-bold mt-3'>new to Shutters-Stacker? <span onClick={navigateToRegister}>
 

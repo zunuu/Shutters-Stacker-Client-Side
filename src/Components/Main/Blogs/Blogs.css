@@ -1,0 +1,20 @@
+.blogs {
+    padding: 100px;
+    width: 50%;
+}
+
+.eachBlog {
+    background-color: rgba(128, 0, 128, 0.199);
+    padding: 50px;
+    transition: .3s;
+    border-radius: 20px;
+}
+
+.eachBlog:hover {
+    background-color: rgba(121, 173, 73, 0.199);
+    padding: 50px;
+}
+
+.fire-img {
+    height: 100vh;
+}
