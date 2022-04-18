@@ -1,3 +1,4 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -5,13 +6,16 @@ import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Header.css'
 const Header = () => {
-    const [user] = useAuthState(auth)
+    const [user] = useAuthState(auth);
+    const handleSignOut = () => {
+        signOut(auth);
+    }
     return (
 
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="#home">
-                    <Link to='/home'><strong>Shutters-</strong><span>Stacker</span></Link>
+                    <Link to='/'><strong>Shutters-</strong><span>Stacker</span></Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -27,7 +31,12 @@ const Header = () => {
 
 
                         <Nav.Link href="#checkout">
-                            <Link className="py-2 px-3 mx-1 routes" to='/checkout'>Checkout</Link>
+                            {
+                                user ?
+                                    <Link className="py-2 px-3 mx-1 routes" to='/checkout'>Checkout</Link>
+                                    :
+                                    <Link className="py-2 px-3 mx-1 routes" to='/login'>Checkout</Link>
+                            }
                         </Nav.Link>
 
 
@@ -44,10 +53,11 @@ const Header = () => {
                         <Nav.Link href="#login">
                             {
                                 user ?
-
-                                    <Link className="py-2 px-3 mx-1 routes" to='/login'>Login</Link>
+                                    <button onClick={handleSignOut} className="btn btn-link text-white text-decoration-none pt-0 mt-0 " >Sign Out</button>
                                     :
-                                    <button>Sign Out</button>}
+                                    <Link className="py-2 px-3 mx-1 routes" to='/login'>Login</Link>
+
+                            }
                         </Nav.Link>
 
 

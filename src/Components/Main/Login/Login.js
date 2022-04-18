@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './Login.css'
 
@@ -12,13 +12,17 @@ const Login = () => {
     let navigateToRegister = e => {
         navigate('/register');
     }
+    const location = useLocation();
+    let from = location.state?.from?.pathname || '/checkout';
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-
+    if (user) {
+        navigate(from, { replace: true });
+    }
     const loadingLogin = e => {
         e.preventDefault();
         const email = emailRef.current.value;
@@ -44,8 +48,11 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
+                {
+                    loading && <p>loading...{ }...</p>
+                }
                 <Button variant="primary" type="submit">
-                    Submit
+                    Login
                 </Button>
                 <p className='fw-bold mt-3'>new to Shutters-Stacker? <span onClick={navigateToRegister}>
 

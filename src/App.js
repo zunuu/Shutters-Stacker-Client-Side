@@ -20,6 +20,8 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="checkout" element={<Checkout></Checkout>} />
+        <Route path="/" element={<Home></Home>} />
+
         <Route path="home" element={<Home></Home>} />
         <Route path="services" element={<Services></Services>} />
         <Route path="blogs" element={<Blogs></Blogs>} />
@@ -30,7 +32,7 @@ function App() {
         } />
 
         <Route path="aboutme" element={<Aboutme></Aboutme>} />
-        <Route path="login" element={<Login></Login>} />
+        <Route path="/login" element={<Login></Login>} />
         <Route path="register" element={<Register></Register>} />
         <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
