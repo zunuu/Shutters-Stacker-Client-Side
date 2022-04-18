@@ -14,7 +14,9 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
-
+    // if (error) {
+    //     console.log(error);
+    // }
     const navigate = useNavigate();
     let navigateToLogin = e => {
         navigate('/login')
@@ -26,7 +28,7 @@ const Register = () => {
         const name = e.target.text.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        createUserWithEmailAndPassword(password, email);
+        createUserWithEmailAndPassword(email, password);
     }
 
     return (
@@ -56,6 +58,7 @@ const Register = () => {
                 <Button variant="primary w-100" type="submit">
                     Register
                 </Button>
+                {/* <p>{error}</p> */}
                 <p className='fw-bold mt-3'>Already have an account? <span onClick={navigateToLogin}>
 
                     <Link to="login" className='text-danger fw-bold '>

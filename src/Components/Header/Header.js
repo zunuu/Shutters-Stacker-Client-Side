@@ -1,8 +1,11 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 import './Header.css'
 const Header = () => {
+    const [user] = useAuthState(auth)
     return (
 
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -39,7 +42,12 @@ const Header = () => {
 
 
                         <Nav.Link href="#login">
-                            <Link className="py-2 px-3 mx-1 routes" to='/login'>Login</Link>
+                            {
+                                user ?
+
+                                    <Link className="py-2 px-3 mx-1 routes" to='/login'>Login</Link>
+                                    :
+                                    <button>Sign Out</button>}
                         </Nav.Link>
 
 
