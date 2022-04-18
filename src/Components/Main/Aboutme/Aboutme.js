@@ -5,6 +5,7 @@ const Aboutme = () => {
     return (
         <div className='d-flex p-5 blogs justify-content-center align-items-center'>
             <div className='col-xl-6 '>
+                {/* about page */}
                 <h2 className='greetings'>
                     Assalamu Alaikum, It's <span className='name'>Zunayed Hossain</span>
                 </h2>

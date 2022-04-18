@@ -19,11 +19,12 @@ function App() {
     <div className="App">
       <Header></Header>
       <Routes>
-        <Route path="checkout" element={<Checkout></Checkout>} />
+
         <Route path="/" element={<Home></Home>} />
 
         <Route path="home" element={<Home></Home>} />
         <Route path="services" element={<Services></Services>} />
+        {/* <Route path="checkout" element={<Checkout></Checkout>} /> */}
         <Route path="blogs" element={<Blogs></Blogs>} />
         <Route path="checkout" element={
           <RequireAuth>

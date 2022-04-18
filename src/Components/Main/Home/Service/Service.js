@@ -1,9 +1,13 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './Service.css'
+import './Service.css';
+import auth from '../../../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+
 const Service = (props) => {
-    const { name, description, price, image, button } = props.service;
+    const [user] = useAuthState(auth);
+    const { name, description, price, image } = props.service;
     console.log(props.service);
     return (
 
@@ -23,7 +27,12 @@ const Service = (props) => {
             <div className="card-body ">
                 <strong className=''>Price: {price}</strong>
                 <div className="d-grid gap-2">
-                    <button type="button" className="mx-auto buyNowBtn w-50 btn btn-outline-warning"><Link to='/checkout'>Buy Now</Link></button>
+                    {
+                        user ?
+                            <button type="button" className="mx-auto buyNowBtn w-50 btn btn-outline-warning"><Link to='/checkout'>Buy Now</Link></button>
+                            :
+                            <button type="button" className="mx-auto buyNowBtn w-50 btn btn-outline-warning"><Link to='/login'>Buy Now</Link></button>
+                    }
 
                 </div>
             </div>
