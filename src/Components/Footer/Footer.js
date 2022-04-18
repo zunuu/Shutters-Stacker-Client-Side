@@ -1,9 +1,9 @@
 import React from 'react';
-
+import './Footer.css'
 const Footer = () => {
     return (
-        <div className='text-white ' >
-            copyright &copy; Shutters Stacker
+        <div className='footer' >
+            <p> copyright &copy; Shutters-Stacker</p>
         </div>
     );
 };
