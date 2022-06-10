@@ -9,7 +9,7 @@ Link :(.....................)
 ### In this project,You will see:
 
 * A website of a wildlife enthusiast photographer
-* You will able take the service of the owner of this site
+* You will be able to take the service from the owner of this site
 * Here, you will see several options like : [Checkout]() ,[About](), [A Blog](), [Sign In Option]()
 * User will be able to CheckOut through register e new account or with an existing account
 * User can buy photos from the owner by online & can use without any copyright issue in their journal,research, blogs
