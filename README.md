@@ -1,7 +1,7 @@
 # Getting Started with Shutters-Stacker
 
 This project name is [Shutters-Stacker](https://github.com/facebook/create-react-app). 
-Link :([Here,](https://shutters-stacker.web.app/))
+Link :([https://shutters-stacker.web.app/](https://shutters-stacker.web.app/))
 
 ## Insights
 ----
